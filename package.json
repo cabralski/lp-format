@@ -1,8 +1,12 @@
 {
   "name": "lp-format",
   "displayName": "LP Format",
-  "description": "Support for Gurobi LP files.",
+  "description": "Support for LP files.",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cabralski/lp-format.git"
+  },
   "engines": {
     "vscode": "^1.96.0"
   },
