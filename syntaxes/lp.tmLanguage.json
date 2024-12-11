@@ -16,63 +16,75 @@
 	}
 	],
 	"repository": {
-	"comments": {
-		"patterns": [
-			{
-				"name": "comment.line.backslash.lp",
-				"match": "\\\\.*$"
-			}
-		]
-	},
-	"keywords": {
-		"patterns": [
-			{
-				"name": "keyword.control.lp",
-				"match": "\\b(Maximize|Minimize|Subject To|Bounds|General|Binary|Semi-Continuous|SOS|End)\\b"
-			},
-			{
-				"name": "keyword.control.sub.lp",
-				"match": "\\b(multi-objectives)\\b"
-			},
-			{
-				"name": "keyword.control.lp",
-				"match": "\\b(Integer)\\b"
-			}
-		]
-	},
-	"sections": {
-		"patterns": [
-			{
-				"name": "entity.name.section.lp",
-				"match": "^\\s*(Maximize|Minimize|Subject To|Bounds|Generals|Binaries|Semi-Continuous|SOS|End)\\b",
-				"captures": {
-					"1": {
-						"name": "keyword.control.lp"
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.backslash.lp",
+					"match": "\\\\.*$"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.lp",
+					"match": "\\b(Maximize|Minimize|Subject To|Bounds|SOS|End)\\b"
+				},
+				{
+					"name": "keyword.variable.type.lp",
+					"match": "\\b(Binary|Binaries|Bin|Generals|General|Gen|Semi-continuous|Semis|Semi)\\b"
+				},
+				{
+					"name": "keyword.control.sub.lp",
+					"match": "\\b(multi-objectives)\\b"
+				},
+				{
+					"name": "keyword.control.lp",
+					"match": "\\b(Integer)\\b"
+				},
+				{
+					"name": "keyword.other.lp",
+					"match": "\\b(free)\\b"
+				},
+				{
+					"name": "support.function.lp",
+					"match": "\\b(POLY|CONSTANT|VARIABLE|PLUS|MINUS|MULTIPLY|DIVIDE|UMINUS|SQUARE|SQRT|SIN|COS|TAN|POW|EXP|EXPA|LOG|LOG2|LOG10|LOGISTIC|LOG_\\d+)\\b"
+				}
+			]
+		},
+		"sections": {
+			"patterns": [
+				{
+					"name": "entity.name.section.lp",
+					"match": "^\\s*(Maximize|Minimize|Subject To|Bounds|Generals|Binaries|Semi-Continuous|SOS|End)\\b",
+					"captures": {
+						"1": {
+							"name": "keyword.control.lp"
+						}
 					}
 				}
-			}
-		]
-	},
-	"expressions": {
-		"patterns": [
-			{
-				"name": "variable.parameter.lp",
-				"match": "\\b[a-zA-Z][a-zA-Z0-9_]*:"
-			},
-			{
-				"name": "variable.other.lp",
-				"match": "\\b[a-zA-Z][a-zA-Z0-9_]*\\b"
-			},
-			{
-				"name": "constant.numeric.lp",
-				"match": "\\b\\d+(\\.\\d+)?\\b"
-			},
-			{
-				"name": "keyword.operator.lp",
-				"match": "(:|<=|>=|=|\\^|<|>|\\+|\\-|\\*)"
-			}
-		]
-	}
+			]
+		},
+		"expressions": {
+			"patterns": [
+				{
+					"name": "variable.parameter.lp",
+					"match": "\\b[a-zA-Z][a-zA-Z0-9_]*:"
+				},
+				{
+					"name": "variable.other.lp",
+					"match": "\\b[a-zA-Z][a-zA-Z0-9_]*\\b"
+				},
+				{
+					"name": "constant.numeric.lp",
+					"match": "\\b\\d+(\\.\\d+)?\\b"
+				},
+				{
+					"name": "keyword.operator.lp",
+					"match": "(:|<=|>=|=|\\^|<|>|\\+|\\-|\\*)"
+				}
+			]
+		}
 	},
 	"scopeName": "source.lp"
 }
