@@ -1,0 +1,25 @@
+{
+  "name": "lp-format",
+  "displayName": "LP Format",
+  "description": "Support for Gurobi LP files.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "lp",
+      "aliases": ["LP", "lp"],
+      "extensions": [".lp"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "lp",
+      "scopeName": "source.lp",
+      "path": "./syntaxes/lp.tmLanguage.json"
+    }]
+  }
+}
