@@ -3,6 +3,7 @@
   "displayName": "LP Format",
   "description": "Support for LP files.",
   "icon": "images/polytope.png",
+  "publisher": "cabrix",
   "version": "0.0.1",
   "repository": {
     "type": "git",
