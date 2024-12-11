@@ -2,6 +2,7 @@
   "name": "lp-format",
   "displayName": "LP Format",
   "description": "Support for LP files.",
+  "icon": "images/polytope.png",
   "version": "0.0.1",
   "repository": {
     "type": "git",
